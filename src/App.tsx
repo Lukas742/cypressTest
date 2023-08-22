@@ -1,9 +1,9 @@
-import { Select, Option } from "@ui5/webcomponents-react";
+import { Select, Option, ThemeProvider } from "@ui5/webcomponents-react";
 
 
 function App() {
   return (
-      <>
+      <ThemeProvider>
         <Select>
           <Option>Option 1</Option>
           <Option>Option 2</Option>
@@ -11,7 +11,7 @@ function App() {
           <Option>Option 4</Option>
           <Option>Option 5</Option>
         </Select>
-      </>
+      </ThemeProvider>
   );
 }
 

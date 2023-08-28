@@ -12,12 +12,9 @@ describe("Component tests", async () => {
     // leverage the `getStaticAreaItemDomRef` ui5-wc method, to access the static area item reference
     cy.get("@select").then(async ($el) => {
       const select = $el.get(0);
-      const staticAreaItemPromise = select
-        .getStaticAreaItemDomRef()
-        .then((data) => {
-          return data;
-        });
-      const staticAreaItem = await staticAreaItemPromise;
+      const staticAreaItem = select.getStaticAreaItemDomRef().then((data) => {
+        return data;
+      });
       cy.wrap(staticAreaItem).as("staticAreaItem");
     });
     cy.get("@staticAreaItem").contains("Option 2").click();
